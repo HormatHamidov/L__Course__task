@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Alkatra', cursive;
+}
+
+.navbar {
+    background-image: url('https://images.chesscomfiles.com/uploads/v1/article/27319.746c2259.5000x5000o.5f1afccd859f.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.navbar .navbar__image img {
+    width: 200px;
+    height: 100px;
+}
+
+.navbar__txt ul {
+    display: flex;
+}
+
+.navbar__txt ul {
+    gap: 70px;
+    margin-right: 20px;
+}
+
+.navbar__txt ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.navbar__txt ul li a:hover {
+    color: yellow;
+    transition: 1s;
+}
+
+
