@@ -1,0 +1,39 @@
+{% load static %}
+
+<footer>
+    <div class="active__links">
+        <ul>
+            <li>
+                <a id="changed" href="{% url 'home' %}">Home</a>
+            </li>
+            <li>
+                <a href="{% url 'about' %}">About</a>
+            </li>
+            <li>
+                <a href="{% url 'contact' %}">Contact</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer__logos">
+        <ul>
+            <li>
+                <a href=""><i class="fa-brands fa-instagram fa-spin fa-spin-reverse"></i></a>
+            </li>
+            <li>
+                <a href=""><i class="fa-brands fa-facebook fa-spin fa-spin-reverse"></i></a>
+            </li>
+            <li>
+                <a href=""><i class="fa-brands fa-youtube fa-spin fa-spin-reverse"></i></a>
+            </li>
+            <li>
+                <a href=""><i class="fa-regular fa-envelope fa-spin"></i> </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script src="{% static 'js/app.js' %}"></script>
+</body>
+
+</html>

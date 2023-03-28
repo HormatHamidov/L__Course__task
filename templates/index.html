@@ -1,43 +1,16 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Document</title>
-</head>
+{% block body %}
+<center>
+    <h1>HOME PAGE 2</h1>
 
-<body>
-    <div class="navbar">
-        <div class="navbar__image">
-            <img src="https://images.chesscomfiles.com/uploads/v1/article/27319.746c2259.5000x5000o.5f1afccd859f.png">
-        </div>
-        <div class="navbar__txt">
-            <ul>
-                <li>
-                    <a href="{% url 'home' %}">Home</a>
-                </li>
-                <li>
-                    <a href="{% url 'about' %}">About</a>
-                </li>
-                <li>
-                    <a href="{% url 'contact' %}">Contact</a>
-                </li>
-            </ul>
-        </div>
+    <div class="yoxlama">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae deleniti amet nam laudantium, ad sed fugit sequi pariatur ullam laboriosam dolore numquam atque temporibus a autem omnis dignissimos aperiam in! Eos reiciendis nostrum accusamus tenetur modi aliquam quasi corrupti a nesciunt eius perspiciatis, praesentium ducimus maxime enim molestias cupiditate, mollitia qui ea? Laboriosam minus consequatur voluptates, quod alias inventore necessitatibus quas corporis quos itaque ea iusto excepturi enim tenetur eligendi fugit cumque incidunt maxime temporibus id quia. Modi voluptatum magni exercitationem iusto vel totam nesciunt provident laudantium optio ullam ad omnis iure laboriosam nam quod beatae eius, pariatur voluptatibus atque repellendus? Cumque, ea perspiciatis similique consectetur reiciendis quidem facilis earum iusto amet, nemo laudantium. Error neque dolorem modi? Quod dolore vero molestias ipsum nihil neque quas natus nam at velit nobis porro cum repudiandae veritatis, omnis veniam delectus pariatur earum error expedita esse inventore fugit ratione. At, beatae, adipisci veritatis culpa quaerat perspiciatis ex impedit, veniam rerum atque quibusdam blanditiis cupiditate quas repellat reiciendis laboriosam suscipit reprehenderit facere doloribus rem. Voluptatem tempore odio rerum aliquam quos quas ea reiciendis suscipit sequi molestias, quo minus sit similique, ducimus cum totam consectetur sint voluptas quisquam repellendus vitae soluta magnam provident. Repellat, illo?</p>
     </div>
+</center>
+    
+{% endblock body %}
+    
 
-    <center>
-        <h1>HOME PAGE</h1>
-    </center>
 
-    <script src="{% static 'js/app.js' %}"></script>
-</body>
-
-</html>
