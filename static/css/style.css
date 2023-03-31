@@ -6,6 +6,7 @@
     list-style: none;
     font-family: 'Alkatra', cursive;
 }
+
 a {
     color: inherit;
 }
@@ -47,7 +48,8 @@ a {
     transition: 1s;
 }
 
-button {
+
+.contact__form button {
     background-color: black;
     border: none;
     color: #fff;
@@ -58,7 +60,7 @@ button {
     margin-top: 10px;
 }
 
-button:hover {
+.contact__form button:hover {
     background-color: white;
     color: black;
     transition: 1s;
@@ -96,7 +98,7 @@ footer .footer__logos ul {
     display: flex;
 }
 
-.footer__logos ul{
+.footer__logos ul {
     gap: 30px;
 }
 
@@ -109,13 +111,70 @@ footer i {
     color: #fff;
 }
 
-/* #changed {
-    color: red;
-} */
 
 .active__links ul li:first-of-type {
     color: red;
     font-size: 22px;
     background-color: yellow;
     padding: 5px;
+}
+
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.card {
+    width: 350px;
+    height: 400px;
+    border: 1px solid black;
+    margin: 20px 0;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 3px 3px 14px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 3px 3px 14px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 14px 1px rgba(0, 0, 0, 0.75);
+}
+
+.card:hover {
+    transition: 1s;
+    box-shadow: 3px 3px 14px 1px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 3px 3px 14px 1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 3px 3px 14px 1px rgba(0, 0, 0, 0.25);
+}
+
+.card h2 {
+    border-bottom: 2px solid red;
+}
+
+
+#card__btn {
+    background-color: black;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+
+#card__btn:hover {
+    background-color: white;
+    color: black;
+    transition: 1s;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.card h2,
+p {
+    padding: 5px;
+}
+
+.card img {
+    width: 100%;
 }
