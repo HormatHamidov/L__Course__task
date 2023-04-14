@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Add Article Page
+{% endblock title %}
+
+{% block body %}
+<center>
+    <h3>Add Article Page</h3>
+    <hr>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}} <br>
+        <button type="submit" id="card__btn">Add</button>
+    </form>
+    <br>
+</center>
+{% endblock body %}
+    

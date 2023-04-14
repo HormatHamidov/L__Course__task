@@ -18,11 +18,8 @@
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     <!-- Logo -->
     <link rel="shortcut icon" href="https://cdn.worldvectorlogo.com/logos/django.svg" type="image/x-icon">
-    <!-- Bootstrap CDN -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
 
-    <title>Django Project</title>
+    
 </head>
 
 <body>
@@ -32,15 +29,84 @@
         </div>
         <div class="navbar__txt">
             <ul>
-                <li>
-                    <a href="{% url 'home' %}">Home</a>
-                </li>
-                <li>
-                    <a href="{% url 'about' %}">About</a>
-                </li>
-                <li>
-                    <a href="{% url 'contact' %}">Contact</a>
-                </li>
+                {% if request.user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about' %}">About</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'article:dashboard' %}"><i class="fa-solid fa-user"></i></a>
+                    </li>
+                    <li>
+                        <a href="{% url 'user:logout' %}"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'about' %}">About</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'user:register' %}">Register</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'user:login' %}">Login</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'user:logout' %}"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    </li>
+                {% endif %}
+
             </ul>
         </div>
     </div>
+
+    <style>
+        .messageSuccess {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .messageDanger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #logintext {
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+
+    {% if request.user.is_authenticated %}
+    <p id="logintext">Welcome {{request.user.username}}</p>
+
+    {% else %}
+    <p id="logintext">Dont Login !!!`</p>
+    {% endif %}
+
+    {% if messages %}
+    {% for message in messages %}
+    {% if message.tags == 'info' %}
+    <div class="messageDanger {{message.tags}}">{{message}}</div>
+
+    {% else %}
+    <div class="messageSuccess {{message.tags}}">{{message}}</div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}

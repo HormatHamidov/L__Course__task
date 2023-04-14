@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}
+    Home Page
+{% endblock title %}
+
 {% block body %}
 <center>
     <h1>HOME PAGE 2</h1>
@@ -22,64 +26,6 @@
             sequi molestias, quo minus sit similique, ducimus cum totam consectetur sint voluptas quisquam repellendus
             vitae soluta magnam provident. Repellat, illo?</p>
     </div>
-
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item">
-                <img src="https://images.chesscomfiles.com/uploads/v1/article/27319.746c2259.5000x5000o.5f1afccd859f.png"
-                    class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item active">
-                <img src="https://media.cnn.com/api/v1/images/stellar/prod/230104173032-02-chess-stock.jpg?c=original"
-                    class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="https://images.chesscomfiles.com/uploads/v1/article/27319.746c2259.5000x5000o.5f1afccd859f.png"
-                    class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-            </tr>
-        </tbody>
-    </table>
 </center>
 
 {% endblock body %}

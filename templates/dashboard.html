@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Admin Panel
+{% endblock title %}
+
+{% block body %}
+<center>
+    <h3>Admin Panel</h3>
+    <hr>
+    <br><br>
+
+    <a id="card__btn" href="/articles/addarticle">Add Article</a> 
+    <br><br>
+
+    {% if articles %}
+    <table>
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Title</th>
+				<th>Created Date</th>
+				<th>Update</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody>
+            
+            {% for article in articles %}
+            <tr>
+				<td>{{forloop.counter}}</td>
+				<td><a href="/articles/article/{{article.id}}">{{article.title}}</a></td>
+				<td>{{article.created_date}}</td>
+				<td><a id="articleUpdate" href="/articles/update/{{article.id}}"><i class="fa-solid fa-gear"></i></a></td>
+				<td><a id="articleDelete" href="/a`rticles/delete/{{article.id}}"><i class="fa-solid fa-trash"></i></a></td>
+			</tr>
+            {% endfor %}
+
+		</tbody>
+	</table>
+
+    {% else %}
+    <div class="messageDanger">You dont have an article yet !!!</div>
+    {% endif %}
+
+
+
+
+    <style>
+        #articleUpdate {
+            background-color: yellowgreen;
+            padding: 5px 20px;
+            border-radius: 5px;
+        }
+
+        #articleDelete {
+            background-color: red;
+            padding: 5px 20px;
+            border-radius: 5px;
+            color: #fff;
+        }
+
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			color: #333;
+			font-family: Arial, sans-serif;
+			font-size: 14px;
+			text-align: left;
+		}
+
+		th, td {
+			padding: 10px;
+			border: 1px solid #ccc;
+		}
+
+		th {
+			background-color: #f2f2f2;
+			font-weight: bold;
+		}
+
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		tr:hover {
+			background-color: #ddd;
+		}
+	</style>
+</center>
+{% endblock body %}
+    

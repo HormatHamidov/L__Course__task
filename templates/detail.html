@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    {{article.title}}
+{% endblock title %}
+    
+
+{% block body %}
+<main>
+    <section>
+        <h2>{{article.title}}</h2>
+        <small>{{article.created_date}}</small>
+        <p>{{article.content}}</p>
+    </section>
+</main>
+
+<style>
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    main {
+        margin: 20px;
+    }
+
+    section {
+        border-style: dashed;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    small {
+        font-size: 14px;
+        color: #777;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+</style>
+{% endblock body %}

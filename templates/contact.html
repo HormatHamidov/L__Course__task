@@ -2,6 +2,12 @@
 {% load static %}
 
 
+
+{% block title %}
+    Contact Page
+{% endblock title %}
+    
+
 {% block body %}
 <center>
     <h1>CONTACT PAGE</h1>
@@ -26,7 +32,7 @@
             <label for="password">Password:</label>
             <input required type="password" name="password">
 
-            <button>Send</button>
+            <button id="card__btn">Send</button>
         </form>
     </div>
 </div>
