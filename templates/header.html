@@ -19,7 +19,7 @@
     <!-- Logo -->
     <link rel="shortcut icon" href="https://cdn.worldvectorlogo.com/logos/django.svg" type="image/x-icon">
 
-    
+
 </head>
 
 <body>
@@ -30,40 +30,46 @@
         <div class="navbar__txt">
             <ul>
                 {% if request.user.is_authenticated %}
-                    <li>
-                        <a href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'about' %}">About</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'contact' %}">Contact</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'article:dashboard' %}"><i class="fa-solid fa-user"></i></a>
-                    </li>
-                    <li>
-                        <a href="{% url 'user:logout' %}"><i class="fa-solid fa-right-from-bracket"></i></a>
-                    </li>
+                <li>
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+                <li>
+                    <a href="{% url 'about' %}">About</a>
+                </li>
+                <li>
+                    <a href="{% url 'contact' %}">Contact</a>
+                </li>
+                <li>
+                    <a href="{% url 'article:articles' %}">Articles</a>
+                </li>
+                <li>
+                    <a href="{% url 'article:dashboard' %}"><i class="fa-solid fa-user"></i></a>
+                </li>
+                <li>
+                    <a href="{% url 'user:logout' %}"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </li>
                 {% else %}
-                    <li>
-                        <a href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'about' %}">About</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'contact' %}">Contact</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'user:register' %}">Register</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'user:login' %}">Login</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'user:logout' %}"><i class="fa-solid fa-right-from-bracket"></i></a>
-                    </li>
+                <li>
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+                <li>
+                    <a href="{% url 'about' %}">About</a>
+                </li>
+                <li>
+                    <a href="{% url 'contact' %}">Contact</a>
+                </li>
+                <li>
+                    <a href="{% url 'article:articles' %}">Articles</a>
+                </li>
+                <li>
+                    <a href="{% url 'user:register' %}">Register</a>
+                </li>
+                <li>
+                    <a href="{% url 'user:login' %}">Login</a>
+                </li>
+                <li>
+                    <a href="{% url 'user:logout' %}"><i class="fa-solid fa-right-from-bracket"></i></a>
+                </li>
                 {% endif %}
 
             </ul>

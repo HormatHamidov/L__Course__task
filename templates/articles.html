@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<center>
+    <h2>Articles</h2>
+</center>
+
+{% if articles %}
+
+{% for article in articles %}
+<main>
+    <section>
+        <center>
+            <h2><a href="/articles/article/{{article.id}}">{{article.title}}</a></h2>
+            <h4 style="color:red;">Author: {{article.author}}</h4>
+            <small>{{article.created_date}}</small>
+        </center>
+        <div style="display:flex; justify-content:space-between;">
+            <p style="width:300px;">{{article.content}}</p>
+            {% if article.article_image %}
+            <img style="width:400px; height:300px;" src="{{article.article_image.url}}">
+            {% endif %}
+        </div>
+    </section>
+</main>
+
+<style>
+    body {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    main {
+        margin: 20px;
+    }
+
+    section {
+        border-style: dashed;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    small {
+        font-size: 14px;
+        color: #777;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+</style>
+{% endfor %}
+
+{%else%}
+<div class="messageDanger">There are no articles yet</div>
+{% endif %}
+{% endblock body %}

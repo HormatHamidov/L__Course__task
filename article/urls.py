@@ -4,9 +4,10 @@ from .views import *
 app_name = 'article'
 
 urlpatterns = [
+    path('', articles__page, name='articles'),
     path('dashboard/', dashboard__page, name='dashboard'),
     path('addarticle/', addarticle__page, name='addarticle'),
-    path('article/<int:id>', detail__page, name='detail')
-    # path('update/', update__page, name='update')
-    # path('delete/', delete__page, name='delete')
+    path('article/<int:id>', detail__page, name='detail'),
+    path('update/<int:id>', update__page, name='update'),
+    path('delete/<int:id>', delete__page, name='delete')
 ]

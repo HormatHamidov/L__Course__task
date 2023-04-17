@@ -8,7 +8,7 @@
 <center>
     <h3>Add Article Page</h3>
     <hr>
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {{form.as_p}} <br>
         <button type="submit" id="card__btn">Add</button>

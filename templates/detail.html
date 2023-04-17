@@ -2,16 +2,23 @@
 
 
 {% block title %}
-    {{article.title}}
+{{article.title}}
 {% endblock title %}
-    
+
 
 {% block body %}
 <main>
     <section>
-        <h2>{{article.title}}</h2>
-        <small>{{article.created_date}}</small>
-        <p>{{article.content}}</p>
+        <center>
+            <h2>{{article.title}}</h2>
+            <small>{{article.created_date}}</small>
+        </center>
+        <div style="display:flex; justify-content:space-between;">
+            <p style="width:300px;">{{article.content}}</p>
+            {% if article.article_image %}
+            <img style="width:400px; height:300px;" src="{{article.article_image.url}}">
+            {% endif %}
+        </div>
     </section>
 </main>
 
