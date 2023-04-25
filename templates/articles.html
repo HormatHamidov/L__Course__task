@@ -7,6 +7,13 @@
 </center>
 
 {% if articles %}
+<center>
+    <form method="get">
+        {% csrf_token %}
+        <input name="keyword" type="text">
+        <button id="card__btn" type="submit"><< Search</button>
+    </form>
+</center>
 
 {% for article in articles %}
 <main>
@@ -17,7 +24,8 @@
             <small>{{article.created_date}}</small>
         </center>
         <div style="display:flex; justify-content:space-between;">
-            <p style="width:300px;">{{article.content}}</p>
+            <p style="width:300px;">{{article.content|truncatewords:5}}</p>
+            <a style="text-align:center; float:left;" href="/articles/article/{{article.id}}" id="card__btn">Read More</a>
             {% if article.article_image %}
             <img style="width:400px; height:300px;" src="{{article.article_image.url}}">
             {% endif %}

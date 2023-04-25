@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'core',
     'article',
     'user',
-    'django_cleanup'
+    'django_cleanup.apps.CleanupConfig'
     # 'ckeditor'
 ]
 
