@@ -20,6 +20,41 @@
             {% endif %}
         </div>
     </section>
+
+    {% if comments %}
+
+    
+    <center>
+        <h2>Comments:</h2>
+    </center>
+    {% for comment in comments %}
+    <div>
+        <div class="show__comment">
+            <h3>Name: {{comment.comment_author}}</h3>
+            <small>{{comment.comment_date}}</small>
+            <p>Comment: {{comment.comment_content}}</p>
+            <hr>
+        </div>
+    </div>
+    {% endfor %}
+        
+    {% else %}
+    <div class="messageDanger">This article has not been commented !!!</div>
+    {% endif %}
+
+    <div class="comment">
+        <form method="POST" action="{% url 'article:comment' article.id %}">
+            {% csrf_token %}
+            <center>
+                <p>Give feedback: </p>
+            </center>
+            <label for="">Name:</label>
+            <input name="comment_author" type="text"><br>
+            <label for="">Your Comments</label>
+            <textarea style="resize:none" name="comment_content" id="" cols="108" rows="5"></textarea>
+            <button id="card__btn" type="submit">Share</button>
+        </form>
+    </div>
 </main>
 
 <style>
