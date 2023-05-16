@@ -27,6 +27,7 @@ urlpatterns = [
     path('about', about__page, name='about'),
     path('contact', contact__page, name='contact'),
     path('articles/', include("article.urls")),
-    path('user/', include("user.urls"))
+    path('user/', include("user.urls")),
+    path('api/article/', include("article.api.urls"),name='articleapi'),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
